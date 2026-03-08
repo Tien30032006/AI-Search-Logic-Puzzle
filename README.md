@@ -1,6 +1,7 @@
 # AI-Search-Logic-Puzzle
 
 **Bài tập lớn 1 - Môn Nhập môn Trí tuệ Nhân tạo**
+
 Bài tập lớn này xây dựng hệ thống Trí tuệ Nhân tạo để tự động giải quyết các bài toán Logic Puzzles (Nonogram và Chess Puzzles). Hệ thống áp dụng và so sánh hiệu năng giữa các chiến lược Tìm kiếm mù (Blind Search: DFS, BrFS) và Tìm kiếm có thông tin (Heuristic Search).
 
 ## 📂 Cấu trúc thư mục (Project Structure)
