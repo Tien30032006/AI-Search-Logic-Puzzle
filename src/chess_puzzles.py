@@ -17,7 +17,7 @@ def load_test_cases():
 
     try:
         base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        path = os.path.join(base, "input", "chess_puzzles_in.txt")
+        path = os.path.join(base, "input", "chess_test/ranger_10.txt")
     except:
         path = os.path.join("input", "chess_puzzles_in.txt")
 
@@ -191,16 +191,16 @@ def heuristic(board):
 
         moves = MOVES[piece](x,y,board)
 
-        mobility += len(moves)
+        total_capture += len(moves)
 
         captures = 0
         for tx,ty in moves:
             if is_valid(tx,ty) and board[tx][ty] is not None:
                 captures += 1
 
-        total_capture += captures
+        mobility += captures
 
-    return pieces*3 - max_capture + mobility*0.05
+    return pieces*3 - total_capture*0.3 - mobility*0.1
 
 # ===============================
 # DFS
