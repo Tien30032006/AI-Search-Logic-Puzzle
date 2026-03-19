@@ -181,17 +181,26 @@ def heuristic(board):
 
     pieces = count_pieces(board)
 
-    captures = 0
+    total_capture = 0
+    mobility = 0
 
     for piece,x,y in find_pieces(board):
 
-        if piece in MOVES:
-            for tx,ty in MOVES[piece](x,y,board):
+        if piece not in MOVES:
+            continue
 
-                if is_valid(tx,ty) and board[tx][ty] is not None:
-                    captures += 1
+        moves = MOVES[piece](x,y,board)
 
-    return pieces + captures
+        mobility += len(moves)
+
+        captures = 0
+        for tx,ty in moves:
+            if is_valid(tx,ty) and board[tx][ty] is not None:
+                captures += 1
+
+        total_capture += captures
+
+    return pieces*3 - max_capture + mobility*0.05
 
 # ===============================
 # DFS
