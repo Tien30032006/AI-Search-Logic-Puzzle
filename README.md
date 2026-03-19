@@ -1,4 +1,4 @@
-# AI-Search-Logic-Puzzle
+# Logic-Puzzle
 
 **Bài tập lớn 1 - Môn Nhập môn Trí tuệ Nhân tạo**
 
@@ -10,25 +10,25 @@ Bài tập lớn được tổ chức theo cấu trúc chuẩn như sau:
 
 ```text
 AI-SEARCH-LOGIC-PUZZLE/
-├── docs/                   # Chứa tài liệu báo cáo và slide thuyết trình
+├── docs/                      # Chứa tài liệu báo cáo và slide thuyết trình
 │   ├── BaoCao_BTL1.pdf
 │   └── Slides_BTL1.pdf
-├── input/                  # Chứa dữ liệu đầu vào (Testcases) dạng JSON/Text
-│   ├── chess_puzzles_in.txt
+├── input/                     # Chứa dữ liệu đầu vào (Testcases) dạng JSON/Text
+│   ├── chess_test
 │   └── nonogram_in.txt
-├── output/                 # Chứa các file kết quả xuất ra (nếu có)
-├── src/                    # Chứa mã nguồn chính (Source code)
-│   ├── benchmark.py        # Script chạy đánh giá hiệu năng (Time & Memory) và vẽ đồ thị
-│   ├── chess_puzzles.py    # Chương trình giải bài toán Chess Puzzles
-│   └── nonogram.py         # Chương trình giải bài toán Nonogram 
-├── .gitignore              # Cấu hình bỏ qua các file rác khi push lên Git
-├── README.md               # Tài liệu hướng dẫn sử dụng đồ án
-└── requirements.txt        # Danh sách các thư viện cần cài đặt
+├── src/                       # Chứa mã nguồn chính (Source code)
+│   ├── benchmark_chess.py     # Script chạy đánh giá hiệu năng (Time & Memory) và vẽ đồ thị chess
+│   ├── benchmark_nonogram.py  # Script chạy đánh giá hiệu năng (Time & Memory) và vẽ đồ thị nonofram
+│   ├── chess_puzzles.py       # Chương trình giải bài toán Chess Puzzles
+│   └── nonogram.py            # Chương trình giải bài toán Nonogram 
+├── .gitignore                 # Cấu hình bỏ qua các file rác khi push lên Git
+├── README.md                  # Tài liệu hướng dẫn BTL
+└── requirements.txt           # Danh sách các thư viện cần cài đặt
 ```
 
 ## 🚀 Hướng dẫn Cài đặt (Installation)
 
-**Bước 1:** Clone repository này về máy hoặc giải nén thư mục đồ án. Mở Terminal/Command Prompt tại thư mục gốc của đồ án.
+**Bước 1:** Clone repository này về máy hoặc giải nén thư mục bài tập lớn. Mở Terminal/Command Prompt tại thư mục gốc của bài tập lớn.
 
 **Bước 2:** Cài đặt các thư viện Python cần thiết bằng lệnh:
 
@@ -59,5 +59,6 @@ python src/chess_puzzles.py
 Script này sẽ chạy ngầm các thuật toán qua các testcases, sau đó xuất ra biểu đồ Line Chart so sánh Thời gian (Time) và Bộ nhớ (RAM) tiêu thụ.
 
 ```bash
-python src/benchmark.py
+python src/benchmark_chess.py
+python src/benchmark_nonogram.py
 ```
